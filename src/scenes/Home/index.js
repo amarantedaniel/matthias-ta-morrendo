@@ -12,9 +12,13 @@ const App = () => {
       .then(setGlicoseData)
   }, [])
 
+  const status = getHealthStatusFromData(glicoseData)
+
   return (
     <div className="home">
       <h1>Matthias ta morrendo?</h1>
+      <span>{status && status.dying}</span>
+      <span>{status && status.but}</span>
       <Chart data={glicoseData} />
     </div>
   )
@@ -30,5 +34,28 @@ const parseGlicoseDataFromCsvResponse = ({ data }) =>
     .split('\n')
     .map(point => point.split(','))
     .map(point => ({ date: point[0], glicose: point[1] }))
+
+const getHealthStatusFromData = data => {
+  const glicose = getMostRecentGlicoseValue(data)
+  return getStatusFromGlicose(glicose)
+}
+
+const getMostRecentGlicoseValue = glicoseData => {
+  const lastData = [...glicoseData].pop()
+  return lastData && lastData.glicose
+}
+
+const getStatusFromGlicose = glicose => {
+  switch (true) {
+    case glicose < 60:
+      return { dying: 'SIM' }
+    case glicose >= 60 && glicose <= 120:
+      return { dying: 'NÃO' }
+    case glicose > 120:
+      return { dying: 'NÃO', but: 'mas ta se fudendo' }
+    default:
+      return undefined
+  }
+}
 
 export default App
