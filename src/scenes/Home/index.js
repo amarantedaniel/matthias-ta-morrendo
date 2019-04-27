@@ -13,7 +13,8 @@ const App = () => {
   }, [])
 
   return (
-    <div>
+    <div className="home">
+      <h1>Matthias ta morrendo?</h1>
       <Chart data={glicoseData} />
     </div>
   )
