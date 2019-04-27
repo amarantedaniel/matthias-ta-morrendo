@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.0/workbox-sw.js");
 
 importScripts(
-  "/matthias-ta-morrendo/precache-manifest.a5bf3e0e00a7dffe48003e78ef190e72.js"
+  "/matthias-ta-morrendo/precache-manifest.c98566d72546bba95d0744d0de465f61.js"
 );
 
 self.addEventListener('message', (event) => {
