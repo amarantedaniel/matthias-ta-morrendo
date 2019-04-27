@@ -4,18 +4,17 @@ import Chart from 'components/Chart'
 import './home.scss'
 
 const App = () => {
-  const [glicose, setGlicose] = useState()
+  const [glicoseData, setGlicoseData] = useState([])
 
   useEffect(() => {
     fetchData()
-      .then(parseLastGlicoseFromResponse)
-      .then(setGlicose)
+      .then(parseGlicoseDataFromCsvResponse)
+      .then(setGlicoseData)
   }, [])
 
   return (
     <div>
-      <h1>{glicose > 120 ? 'sim' : 'não'}</h1>
-      <Chart />
+      <Chart data={glicoseData} />
     </div>
   )
 }
@@ -25,11 +24,10 @@ const fetchData = () =>
     'https://docs.google.com/spreadsheets/d/1rgUTX_90dFgdIWYj5lfooY2q8WEZfxmD6D78DsB6sew/export?exportFormat=csv',
   )
 
-const parseLastGlicoseFromResponse = response =>
-  response.data
+const parseGlicoseDataFromCsvResponse = ({ data }) =>
+  data
     .split('\n')
-    .slice(-1)[0]
-    .split(',')
-    .slice(-1)[0]
+    .map(point => point.split(','))
+    .map(point => ({ date: point[0], glicose: point[1] }))
 
 export default App
