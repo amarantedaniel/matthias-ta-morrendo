@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import axios from 'axios'
+import Chart from 'components/Chart'
 import './home.scss'
 
 const App = () => {
@@ -11,7 +12,12 @@ const App = () => {
       .then(setGlicose)
   }, [])
 
-  return <div>{glicose > 120 ? 'sim' : 'não'}</div>
+  return (
+    <div>
+      <h1>{glicose > 120 ? 'sim' : 'não'}</h1>
+      <Chart />
+    </div>
+  )
 }
 
 const fetchData = () =>
