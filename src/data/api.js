@@ -10,4 +10,4 @@ const parseGlicoseDataFromCsvResponse = ({ data }) =>
   data
     .split('\n')
     .map(point => point.split(','))
-    .map(point => ({ date: point[0], glicose: point[1] }))
+    .map(([date, glicose]) => ({ date, glicose }))
