@@ -4,6 +4,8 @@
   "private": true,
   "homepage": "https://amarantedaniel.github.io/matthias-ta-morrendo",
   "dependencies": {
+    "@types/react-dom": "^16.8.4",
+    "@types/recharts": "^1.1.16",
     "axios": "^0.18.0",
     "gh-pages": "^2.0.1",
     "node-sass": "^4.12.0",

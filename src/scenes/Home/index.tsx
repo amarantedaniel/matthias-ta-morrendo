@@ -2,10 +2,11 @@ import React, { useState, useEffect } from 'react'
 import Chart from 'components/Chart'
 import { fetchGlicoseData } from 'data/api'
 import { getHealthStatusFromData } from 'data/glicose'
+import { GlicoseData } from 'data'
 import './home.scss'
 
 const App = () => {
-  const [glicoseData, setGlicoseData] = useState([])
+  const [glicoseData, setGlicoseData] = useState<Array<GlicoseData>>([])
 
   useEffect(() => {
     fetchGlicoseData().then(setGlicoseData)

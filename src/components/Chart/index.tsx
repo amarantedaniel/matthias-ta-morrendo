@@ -1,4 +1,5 @@
 import React from 'react'
+import { GlicoseData } from 'data'
 import {
   LineChart,
   ResponsiveContainer,
@@ -8,7 +9,11 @@ import {
   CartesianGrid,
 } from 'recharts'
 
-const Chart = ({ data }) => (
+interface Props {
+  data: Array<GlicoseData>
+}
+
+const Chart = ({ data }: Props) => (
   <ResponsiveContainer width="95%" height={300}>
     <LineChart data={data}>
       <CartesianGrid strokeDasharray="3 3" />
