@@ -1,21 +1,23 @@
+import { GlicoseStatus, GlicoseData } from 'data'
+
 export const getHealthStatusFromData = (
-  data: any,
+  data: Array<GlicoseData>,
 ): GlicoseStatus | undefined => {
   const glicose = getMostRecentGlicoseValue(data)
   return getStatusFromGlicose(glicose)
 }
 
-const getMostRecentGlicoseValue = (glicoseData: any): number => {
+const getMostRecentGlicoseValue = (
+  glicoseData: Array<GlicoseData>,
+): number | undefined => {
   const lastData = [...glicoseData].pop()
   return lastData && lastData.glicose
 }
 
-interface GlicoseStatus {
-  dying: string
-  but: string | undefined
-}
-
-const getStatusFromGlicose = (glicose: number): GlicoseStatus | undefined => {
+const getStatusFromGlicose = (
+  glicose: number | undefined,
+): GlicoseStatus | undefined => {
+  if (glicose === undefined) return undefined
   switch (true) {
     case glicose < 60:
       return { dying: 'SIM', but: undefined }
