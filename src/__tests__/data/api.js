@@ -11,8 +11,8 @@ describe('fetchGlicoseData', () => {
 
     const glicoseData = await fetchGlicoseData()
     const expectedObject = [
-      { date: '2019-03-12 07:58', glicose: '250' },
-      { date: '2019-03-13 07:46', glicose: '290' },
+      { date: '2019-03-12 07:58', glicose: 250 },
+      { date: '2019-03-13 07:46', glicose: 290 },
     ]
 
     expect(glicoseData).toMatchObject(expectedObject)
