@@ -4,6 +4,7 @@
   "private": true,
   "homepage": "https://amarantedaniel.github.io/matthias-ta-morrendo",
   "dependencies": {
+    "@types/jest": "^24.0.12",
     "@types/react-dom": "^16.8.4",
     "@types/recharts": "^1.1.16",
     "axios": "^0.18.0",
