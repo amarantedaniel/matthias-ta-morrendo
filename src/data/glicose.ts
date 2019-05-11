@@ -19,9 +19,9 @@ const getStatusFromGlicose = (
 ): GlicoseStatus | undefined => {
   if (glicose === undefined) return undefined
   switch (true) {
-    case glicose < 60:
+    case glicose < 80:
       return { dying: 'SIM', but: undefined }
-    case glicose >= 60 && glicose <= 120:
+    case glicose >= 80 && glicose <= 120:
       return { dying: 'NÃO', but: undefined }
     case glicose > 120:
       return { dying: 'NÃO', but: 'mas ta se fudendo' }

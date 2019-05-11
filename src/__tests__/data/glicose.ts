@@ -2,21 +2,21 @@ import { getHealthStatusFromData } from 'data/glicose'
 
 describe('getHealthStatusFromData', () => {
   describe('when glicoseData is a list of points', () => {
-    describe('when last glicose is under 60', () => {
+    describe('when last glicose is under 80', () => {
       it('should return SIM to dying', () => {
         const glicoseData = [
           { date: '2019-03-12 07:58', glicose: 250 },
-          { date: '2019-03-12 07:58', glicose: 59 },
+          { date: '2019-03-12 07:58', glicose: 79 },
         ]
         const expected = { dying: 'SIM' }
         expect(getHealthStatusFromData(glicoseData)).toMatchObject(expected)
       })
     })
-    describe('when last glicose is between 60 and 120', () => {
+    describe('when last glicose is between 80 and 120', () => {
       it('should return NÃO to dying', () => {
         const glicoseData = [
           { date: '2019-03-12 07:58', glicose: 250 },
-          { date: '2019-03-12 07:58', glicose: 60 },
+          { date: '2019-03-12 07:58', glicose: 80 },
         ]
         const expected = { dying: 'NÃO' }
         expect(getHealthStatusFromData(glicoseData)).toMatchObject(expected)
