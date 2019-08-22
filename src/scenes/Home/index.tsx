@@ -7,6 +7,7 @@ import './home.scss'
 
 const App = () => {
   const [glicoseData, setGlicoseData] = useState<Array<GlicoseData>>([])
+  const [dataCount, setDataCount] = useState<number>(5)
 
   useEffect(() => {
     fetchGlicoseData().then(setGlicoseData)
@@ -19,7 +20,14 @@ const App = () => {
       <h1>Matthias ta morrendo?</h1>
       <span>{status && status.dying}</span>
       <span>{status && status.but}</span>
-      <Chart data={glicoseData} />
+      <input
+        type="range"
+        min={1}
+        max={100}
+        value={dataCount}
+        onChange={event => setDataCount(parseInt(event.target.value))}
+      />
+      <Chart data={glicoseData} count={dataCount} />
     </div>
   )
 }
