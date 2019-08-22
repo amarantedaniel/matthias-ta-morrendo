@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/matthias-ta-morrendo/static/css/main.7d7a9973.chunk.css",
-    "main.js": "/matthias-ta-morrendo/static/js/main.9f7d192c.chunk.js",
-    "main.js.map": "/matthias-ta-morrendo/static/js/main.9f7d192c.chunk.js.map",
-    "runtime~main.js": "/matthias-ta-morrendo/static/js/runtime~main.23c276e8.js",
-    "runtime~main.js.map": "/matthias-ta-morrendo/static/js/runtime~main.23c276e8.js.map",
-    "static/js/2.a300e89f.chunk.js": "/matthias-ta-morrendo/static/js/2.a300e89f.chunk.js",
-    "static/js/2.a300e89f.chunk.js.map": "/matthias-ta-morrendo/static/js/2.a300e89f.chunk.js.map",
+    "main.css": "/matthias-ta-morrendo/static/css/main.e89563be.chunk.css",
+    "main.js": "/matthias-ta-morrendo/static/js/main.96a4d045.chunk.js",
+    "main.js.map": "/matthias-ta-morrendo/static/js/main.96a4d045.chunk.js.map",
+    "runtime~main.js": "/matthias-ta-morrendo/static/js/runtime~main.98d4f464.js",
+    "runtime~main.js.map": "/matthias-ta-morrendo/static/js/runtime~main.98d4f464.js.map",
+    "static/js/2.d9af1391.chunk.js": "/matthias-ta-morrendo/static/js/2.d9af1391.chunk.js",
+    "static/js/2.d9af1391.chunk.js.map": "/matthias-ta-morrendo/static/js/2.d9af1391.chunk.js.map",
     "index.html": "/matthias-ta-morrendo/index.html",
-    "precache-manifest.afa4c1413eb3fa7582f2a44fc5785ac2.js": "/matthias-ta-morrendo/precache-manifest.afa4c1413eb3fa7582f2a44fc5785ac2.js",
+    "precache-manifest.9c3d46524f47ace3b3a7a6ea14fe8d85.js": "/matthias-ta-morrendo/precache-manifest.9c3d46524f47ace3b3a7a6ea14fe8d85.js",
     "service-worker.js": "/matthias-ta-morrendo/service-worker.js",
-    "static/css/main.7d7a9973.chunk.css.map": "/matthias-ta-morrendo/static/css/main.7d7a9973.chunk.css.map"
+    "static/css/main.e89563be.chunk.css.map": "/matthias-ta-morrendo/static/css/main.e89563be.chunk.css.map"
   }
 }
